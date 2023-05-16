@@ -1,0 +1,82 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.footer {
+  background-color: #B9D5FD;
+  padding: 40px 100px 54px 100px;
+
+  .container {
+    .footer-block {
+      display: flex;
+      align-items: center;
+
+      &.footer-menu nav {
+        margin-left: 40px;
+
+        ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+
+          li {
+            margin-right: 20px;
+            list-style: none;
+
+            a {
+              font-size: 16px;
+              color: $main-text-color;
+              cursor: pointer;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      &.footer-info {
+        margin-top: 40px;
+        display: flex;
+        align-items: baseline;
+        .footer-info-item {
+          max-width: 253px;
+          margin-right: 60px;
+          font-size: 16px;
+          &:last-child{
+            margin-right: 0;
+          }
+          .footer-info-item-name {
+            font-weight: 500;
+            color: $blue-text-color;
+            margin-bottom: 10px;
+          }
+          .footer-info-item-content {
+            a {
+              line-height: 130%;
+              color: $main-text-color;
+              text-decoration: none;
+              cursor: pointer;
+              margin-right: 12px;
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+          .footer-info-item-action {
+            margin-top: 10px;
+            padding: 10px 20px;
+            width: 153px;
+            height: 36px;
+            font-weight: 500;
+            font-size: 12px;
+          }
+        }
+      }
+
+
+      &.footer-rights {
+        color: $blue-text-color;
+      }
+    }
+  }
+}
+
+

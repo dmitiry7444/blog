@@ -1,0 +1,77 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.login {
+  padding: 120px 100px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    .login-form {
+      .login-form-title {
+        @include head-lora-36;
+      }
+
+      .login-form-inputs {
+        margin-top: 35px;
+
+        .login-input {
+          margin-top: 5px;
+
+          input {
+            padding: 18px 20px;
+            width: 422px;
+            height: 53px;
+            box-sizing: border-box;
+          }
+        }
+      }
+
+      .login-checkbox {
+        margin-top: 10px;
+        max-width: 424px;
+        display: flex;
+        align-items: flex-start;
+
+
+
+        label {
+          font-size: 14px;
+          line-height: 130%;
+          color: $main-text-color;
+          margin-left: 10px;
+
+          a {
+            color: $blue-text-color;
+            text-decoration: none;
+            border-bottom: 1px solid $blue-text-color;
+          }
+        }
+      }
+
+      .login-form-action {
+        margin-top: 40px;
+
+        button {
+          width: 422px;
+          height: 51px;
+          box-sizing: border-box;
+        }
+      }
+
+      .login-form-link {
+        margin-top: 10px;
+        font-size: 14px;
+        color: $main-text-color;
+
+        a {
+          color: $blue-text-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+

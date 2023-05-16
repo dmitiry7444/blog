@@ -1,0 +1,70 @@
+@import "src/assets/styles/variables";
+.item {
+  width: 291px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  position: relative;
+
+
+
+  .item-image {
+    width: 291px;
+    height: 291px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .item-mark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 34px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    padding: 10px 18px;
+    font-weight: 400;
+    font-size: 11px;
+    text-align: center;
+    color: $blue-text-color;
+    box-sizing: border-box;
+  }
+
+  .item-info {
+    //height: 290px;
+    margin-top: 15px;
+
+
+    .item-info-title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 130%;
+      color: $blue-text-color;
+    }
+
+    .item-info-text {
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 130%;
+      color: $main-text-color;
+    }
+  }
+
+  .item-link {
+    margin-top: 20px;
+
+    a {
+      text-decoration: none;
+      border-bottom: 1px solid $blue-text-color;
+      cursor: pointer;
+      font-size: 16px;
+      color: $blue-text-color;
+    }
+  }
+}
+
+

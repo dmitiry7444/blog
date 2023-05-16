@@ -1,0 +1,364 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.main {
+  padding: 0 100px 60px 100px;
+
+  .container {
+    position: relative;
+
+    .carousel-nav {
+      width: 100%;
+      top: calc(50% - 14px);
+      position: absolute;
+      z-index: 999;
+
+      .carousel-arrows {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 11px;
+
+        a {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .carousel-items {
+      .carousel-item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        box-sizing: border-box;
+        padding: 100px 80px;
+        width: 1239px !important;
+        height: 500px !important;
+
+        .carousel-item-preview {
+          font-weight: 600;
+          font-size: 12px;
+          letter-spacing: 0.4em;
+          text-transform: uppercase;
+          color: $blue-text-color;
+        }
+
+        .carousel-item-title {
+          max-width: 610px;
+          font-family: 'Lora', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 50px;
+          line-height: 130%;
+          color: #FFFFFF;
+
+          span {
+            color: $blue-text-color;
+          }
+        }
+
+        .carousel-item-text {
+          max-width: 456px;
+          margin-top: 20px;
+          font-size: 24px;
+          line-height: 130%;
+          color: #FFFFFF;
+        }
+
+        .carousel-item-action {
+          margin-top: 50px;
+
+          button {
+            width: 163px;
+            height: 51px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.services {
+  padding: 60px 100px;
+
+  .container {
+    .services-title {
+      @include head-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .services-items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .services-item {
+        width: 292px;
+        height: 500px;
+
+        .services-item-name {
+          font-weight: 500;
+          font-size: 20px;
+          color: $blue-text-color;
+          margin-top: 15px;
+        }
+
+        .services-item-text {
+          margin-top: 10px;
+          height: 90px;
+          font-size: 14px;
+          line-height: 130%;
+          color: $main-text-color;
+        }
+
+        .services-item-actions {
+          display: flex;
+          align-items: center;
+          margin-top: 15px;
+
+          .services-item-actions-price {
+            margin-right: 21px;
+            font-weight: 600;
+            font-size: 20px;
+            color: $blue-text-color;
+          }
+
+          .services-item-actions-btn {
+            padding: 15px 33px;
+            width: 163px;
+            height: 51px;
+            box-sizing: border-box;
+            font-size: 16px;
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about {
+  padding: 60px 100px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    .about-info {
+      .about-info-title {
+        @include head-lora-38;
+        margin-bottom: 20px;
+      }
+
+      .about-info-text {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 130%;
+        color: #1E1A2B;
+        width: 633px;
+        margin-bottom: 40px;
+      }
+
+      .about-info-achievement {
+        .about-info-achievement-title {
+          font-family: 'Lora', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 26px;
+          color: $blue-text-color;
+        }
+
+        .about-info-achievement-items {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          width: 704px;
+
+          .about-info-achievement-item {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+
+            .about-info-achievement-item-number {
+              margin-right: 20px;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background: #B9D5FD;
+              position: relative;
+              text-align: center;
+
+              span {
+                position: relative;
+                top: -45%;
+                font-family: 'Lora', sans-serif;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 50px;
+                color: $blue-text-color;
+              }
+            }
+
+            .about-info-achievement-item-text {
+              width: 256px;
+              height: 90px;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 130%;
+              color: #1E1A2B;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.popular {
+  padding: 60px 100px;
+
+  .container {
+    .popular-title {
+      @include head-lora-38;
+      margin-bottom: 50px;
+    }
+
+    .popular-items {
+      display: flex;
+      justify-content: space-between;
+
+
+    }
+
+    .popular-link {
+      margin-top: 40px;
+
+
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        justify-content: end;
+
+        span {
+          font-weight: 500;
+          font-size: 20px;
+          color: #709FDC;
+          margin-right: 14px;
+        }
+      }
+    }
+  }
+}
+
+.reviews {
+  padding: 60px 100px;
+
+  .container {
+    position: relative;
+
+    .reviews-title {
+      @include head-lora-38;
+    }
+
+    .carousel-nav {
+      width: calc(100% + 40px);
+      top: calc(50% + 14px);
+      left: -20px;
+      position: absolute;
+      z-index: 999;
+
+      .carousel-arrows {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .reviews-items {
+      position: relative;
+      margin-top: 20px;
+
+      .reviews-item {
+        padding: 30px;
+        height: 267px;
+        width: 396px;
+        border-radius: 5px;
+        border: 2px solid $blue-text-color;
+        box-sizing: border-box;
+
+        .reviews-item-user {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+
+          .reviews-item-image {
+            width: 60px;
+            height: 60px;
+            margin-right: 26px;
+          }
+
+          .reviews-item-name {
+            font-weight: 600;
+            font-size: 18px;
+            color: $blue-text-color;
+          }
+        }
+
+        .reviews-item-text {
+          font-size: 16px;
+          line-height: 140%;
+          color: $main-text-color;
+        }
+      }
+
+
+    }
+  }
+}
+
+.contacts {
+  padding: 60px 100px 120px 100px;
+  .container {
+    display: flex;
+    align-items: start;
+    .contacts-info {
+      margin-left: 26px;
+      .contacts-info-title {
+        @include head-lora-38;
+      }
+      .contact-info-items {
+        .contact-info-item {
+          margin-top: 20px;
+          .contact-info-item-name {
+            font-weight: 500;
+            font-size: 20px;
+            color: $blue-text-color;
+          }
+          .contact-info-item-content {
+            margin-top: 10px;
+            width: 501px;
+            font-size: 14px;
+            line-height: 130%;
+            color: $main-text-color;
+            a {
+              text-decoration: none;
+              color: $main-text-color;
+            }
+            a svg {
+              cursor: pointer;
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

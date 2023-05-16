@@ -1,0 +1,68 @@
+@import "src/assets/styles/variables";
+
+.comment {
+  margin-top: 40px;
+  .comment-head {
+    display: flex;
+    align-items: center;
+
+    .author-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      overflow: hidden;
+      background: #B9D5FD;
+      border: 2px solid $blue-text-color;
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    .comment-head-info {
+      margin-left: 26px;
+
+      .author-name {
+        font-weight: 600;
+        font-size: 18px;
+        color: $blue-text-color;
+      }
+
+      .comment-date {
+        margin-top: 10px;
+        font-weight: 600;
+        font-size: 14px;
+        color: #BEBEBE;
+      }
+    }
+  }
+  .comment-body {
+    margin-top: 15px;
+    width: 854px;
+    font-size: 14px;
+    line-height: 140%;
+    color: $main-text-color;
+  }
+  .comment-actions {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+.action-item {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  .action-count {
+    width: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: $main-text-color;
+    &.active {
+      color: $blue-text-color;
+    }
+  }
+  .action-icon {
+    cursor: pointer;
+    margin-left: 3px;
+  }
+}
+  }
+}

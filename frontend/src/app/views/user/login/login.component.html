@@ -1,0 +1,39 @@
+<section class="login" [formGroup]="loginForm">
+  <div class="container">
+    <div class="login-form">
+      <div class="login-form-title">
+        Войти в личный кабинет
+      </div>
+      <div class="login-form-inputs">
+        <div class="login-input">
+          <input type="text" class="input" placeholder="Электронная почта"
+                 [ngStyle]="{'border-color': loginForm.get('email')?.invalid
+                 && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched) ? 'red' : ''}"
+                 formControlName="email">
+        </div>
+        <div class="login-input">
+          <app-show-hide-password>
+          <input type="password" #input class="input" placeholder="Пароль"
+                 [ngStyle]="{'border-color': loginForm.get('password')?.invalid
+                 && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched) ? 'red' : ''}"
+                 formControlName="password">
+          </app-show-hide-password>
+        </div>
+      </div>
+      <div class="login-checkbox">
+        <input type="checkbox" id="rememberMe" formControlName="rememberMe">
+        <label for="rememberMe">Запомнить меня</label>
+      </div>
+      <div class="login-form-action">
+        <button class="button" [disabled]="loginForm.invalid"
+                (click)="login()">Войти</button>
+      </div>
+      <div class="login-form-link">
+        Нет аккаунта? <a routerLink="/signup">Пройдите регистрацию</a>
+      </div>
+    </div>
+    <div class="login-image">
+      <img src="/assets/images/pages/login.png" alt="login">
+    </div>
+  </div>
+</section>

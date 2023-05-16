@@ -1,0 +1,196 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.blog {
+  padding: 80px 100px 120px 100px;
+
+  .container {
+    .blog-title {
+      @include head-lora-38;
+    }
+
+    .blog-head {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 45px;
+
+      .blog-applied-filters {
+        display: flex;
+        flex-wrap: wrap;
+
+        .blog-applied-filter {
+          border: 2px solid $blue-text-color;
+          border-radius: 5px;
+          font-size: 16px;
+          color: $blue-text-color;
+          padding: 8px 20px;
+          display: flex;
+          align-items: center;
+          margin-right: 20px;
+
+          a {
+            text-decoration: none;
+            cursor: pointer;
+            display: flex;
+            margin-left: 8px;
+          }
+        }
+      }
+
+      .blog-sorting {
+        width: 148px;
+        min-width: 148px;
+        box-sizing: border-box;
+        position: relative;
+        cursor: pointer;
+
+        .blog-sorting-head {
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          padding: 12px 0 12px 23px;
+          justify-content: space-between;
+          color: $blue-text-color;
+          box-sizing: border-box;
+
+          span {
+            margin-right: 8px;
+          }
+        }
+
+        .blog-sorting-body {
+          position: absolute;
+          width: 100%;
+          box-sizing: border-box;
+          z-index: 3;
+          display: none;
+          padding: 12px 23px;
+          color: #8E8E8E;
+          background: #FFFFFF;
+          border: 2px solid #B9D5FD;
+          border-radius: 0 0 5px 5px;
+
+          .blog-sorting-item {
+            font-size: 16px;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+              font-size: 24px;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            &.active {
+              color: $main-text-color;
+            }
+          }
+
+        }
+
+        &.open {
+          width: 257px;
+          min-width: 257px;
+
+          .blog-sorting-head {
+            background: #B9D5FD;
+            color: $main-text-color;
+            border-radius: 5px 5px 0 0;
+            padding-right: 23px;
+
+            span {
+              margin-left: 0;
+            }
+          }
+
+          .blog-sorting-body {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .blog-articles {
+      display: flex;
+      flex-wrap: wrap;
+
+      & > * {
+        margin-top: 40px;
+      }
+
+      & > :not(:nth-child(4n)) {
+        margin-right: 25px;
+      }
+    }
+
+
+    .pagination {
+      margin-top: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .pagination-arrow {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10px;
+        height: 19px;
+
+        &.prev {
+          background-image: url("../../../../assets/images/pagination/prevActive.png");
+          background-size: cover;
+          background-position: center;
+          &.disabled {
+            background-image: url("../../../../assets/images/pagination/prevDisabled.png");
+          }
+        }
+
+        &.next {
+          background-image: url("../../../../assets/images/pagination/nextActive.png");
+          background-size: cover;
+          background-position: center;
+          &.disabled {
+            background-image: url("../../../../assets/images/pagination/nextDisabled.png");
+          }
+        }
+      }
+
+      .pagination-pages {
+        margin-left: 50px;
+        margin-right: 50px;
+        display: flex;
+        align-items: center;
+
+        .pagination-page {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          margin-right: 40px;
+          font-size: 20px;
+          cursor: pointer;
+          color: $main-text-color;
+
+          &.active {
+            color: $blue-text-color;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+    }
+
+  }
+}
+

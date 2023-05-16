@@ -1,0 +1,45 @@
+<section class="signup" [formGroup]="signUpForm">
+  <div class="container">
+    <div class="signup-form">
+      <div class="signup-form-title">
+        Регистрация на сайте
+      </div>
+      <div class="signup-form-inputs">
+        <div class="signup-input">
+          <input type="text" class="input" placeholder="Ваше имя"
+                 [ngStyle]="{'border-color': signUpForm.get('name')?.invalid
+                 && (signUpForm.get('name')?.dirty || signUpForm.get('name')?.touched) ? 'red' : ''}"
+                 formControlName="name">
+        </div>
+        <div class="signup-input">
+          <input type="text" class="input" placeholder="Электронная почта"
+                 [ngStyle]="{'border-color': signUpForm.get('email')?.invalid
+                 && (signUpForm.get('email')?.dirty || signUpForm.get('email')?.touched) ? 'red' : ''}"
+                 formControlName="email">
+        </div>
+        <div class="signup-input">
+          <app-show-hide-password>
+          <input type="password" #input class="input" placeholder="Пароль" formControlName="password"
+                 [ngStyle]="{'border-color': signUpForm.get('password')?.invalid
+                 && (signUpForm.get('password')?.dirty || signUpForm.get('password')?.touched) ? 'red' : ''}">
+          </app-show-hide-password>
+        </div>
+      </div>
+      <div class="signup-checkbox">
+        <input type="checkbox" id="rights" formControlName="agree">
+        <label for="rights">Я принимаю условия <a routerLink="/rights" fragment="user-rights">пользовательского соглашения</a> и даю согласие на <a
+          routerLink="/rights" fragment="data-rights">обработку персональных данных</a>.</label>
+      </div>
+      <div class="signup-form-action">
+        <button class="button" [disabled]="signUpForm.invalid"
+                (click)="signUp()">Зарегистрироваться</button>
+      </div>
+      <div class="signup-form-link">
+        Уже есть аккаунт? <a routerLink="/login">Войдите</a>
+      </div>
+    </div>
+    <div class="signup-image">
+      <img src="/assets/images/pages/signup.png" alt="signup">
+    </div>
+  </div>
+</section>
